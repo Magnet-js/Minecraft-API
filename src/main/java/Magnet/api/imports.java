@@ -1,6 +1,7 @@
 package Magnet.api;
 
-import Magnet.api.versions.Listener1_8_8_RO_1;
+import Magnet.api.mechaniks.implementation;
+import Magnet.api.versions.Listener1_8_R3;
 import org.bukkit.Bukkit;
 
 public class imports {
@@ -10,23 +11,11 @@ public class imports {
     public static boolean freezeWeather;
     public static boolean hunger;
     public static boolean drop;
-    public static String sversion = "N/A";
 
 
     //Boolean Method
 
-    public static boolean setupManager(){
-        try {
-            sversion = Bukkit.getServer().getClass().getPackage().getName().split("\\.")[3];
-        }catch (ArrayIndexOutOfBoundsException e){
-            return false;
-        }
-        if(sversion.equals("v1_8_8_R1")) {
-            new Listener1_8_8_RO_1();
-            return true;
-        }
-        return false;
-    }
+    
 
     public static void damage(boolean bool){
         if(bool){
