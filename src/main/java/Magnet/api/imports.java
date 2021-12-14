@@ -15,7 +15,7 @@ public class imports {
 
     //Boolean Method
 
-    
+
 
     public static void damage(boolean bool){
         if(bool){

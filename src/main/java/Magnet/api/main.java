@@ -1,5 +1,6 @@
 package Magnet.api;
 
+import Magnet.api.cmd.changeimportscmd;
 import Magnet.api.mechaniks.implementation;
 import Magnet.api.versions.Listener1_8_R3;
 import org.bukkit.Bukkit;
@@ -26,9 +27,11 @@ public class main extends JavaPlugin {
 
         Manager();
 
+        testingapi();
+
     }
     public void Manager(){
-        if(setupManager()){
+        if(setupversion()){
             Bukkit.getConsoleSender().sendMessage("§bimports §aloaded");
         }else {
             Bukkit.getConsoleSender().sendMessage("§bimports load §4ERROR");
@@ -40,9 +43,10 @@ public class main extends JavaPlugin {
 
     }
 
-    public boolean setupManager(){
+    public boolean setupversion(){
         try {
             Bukkit.getConsoleSender().sendMessage(implementation.version);
+            setupcommands();
         }catch (Exception e){
             return false;
         }
@@ -53,5 +57,14 @@ public class main extends JavaPlugin {
         }
         return false;
     }
+    public boolean setupcommands(){
+        try {
+            getCommand("change").setExecutor(new changeimportscmd());
+        }catch (Exception e){
+            return false;
+        }
+        return false;
+    }
+
 
 }
