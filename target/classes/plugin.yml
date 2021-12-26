@@ -3,4 +3,4 @@ version: 0.2
 author: ZipeStudios
 main: Magnet.api.main
 commands:
-  change:
+  api:

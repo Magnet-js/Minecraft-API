@@ -4,7 +4,7 @@ import Magnet.api.mechaniks.implementation;
 import Magnet.api.versions.Listener1_8_R3;
 import org.bukkit.Bukkit;
 
-public class imports {
+public class zipe {
 
     //Booleans
     public static boolean damage;

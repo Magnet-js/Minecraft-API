@@ -1,6 +1,6 @@
 package Magnet.api;
 
-import Magnet.api.cmd.changeimportscmd;
+import Magnet.api.cmd.apicmd;
 import Magnet.api.mechaniks.implementation;
 import Magnet.api.versions.Listener1_8_R3;
 import org.bukkit.Bukkit;
@@ -39,7 +39,7 @@ public class main extends JavaPlugin {
     }
     public void testingapi(){
 
-        imports.damage(false);
+        //zipe.damage(false);
 
     }
 
@@ -59,7 +59,7 @@ public class main extends JavaPlugin {
     }
     public boolean setupcommands(){
         try {
-            getCommand("change").setExecutor(new changeimportscmd());
+            getCommand("api").setExecutor(new apicmd());
         }catch (Exception e){
             return false;
         }
